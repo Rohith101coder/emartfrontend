@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: aliceblue;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navSection {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+.navSection .title h2 {
+  color: white;
+  text-decoration: none;
+}
+
+.link1 {
+  text-decoration: none;
+  color: white;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  flex-wrap: wrap;
+}
+
+.cart {
+  margin-left: 50px;
+  color: white;
+}
+
+.cart span {
+  color: orange;
+}
+
+/* =========================
+   PRODUCT SECTION
+========================= */
+.proSection {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  padding: 20px;
+  justify-content: center;
+  gap: 20px;
+}
+
+.imgBox {
+  width: 100%;
+  max-width: 500px;
+  padding-left: 20px;
+}
+
+.proImage {
+  width: 100%;
+}
+
+.proImage h2 {
+  margin: 10px;
+}
+
+/* =========================
+   SUBMENU
+========================= */
+.subMenu {
+  background-color: rgb(43, 37, 37);
+  color: azure;
+  height: auto;
+  padding: 10px 0;
+}
+
+.subMenu ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+
+.subMenu ul li {
+  list-style: none;
+  margin: 10px 20px;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.subMenu ul li:hover {
+  color: rgba(168, 168, 234, 0.64);
+}
+
+/* =========================
+   PAGE SECTION (GRID)
+========================= */
+.pageSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  padding: 20px;
+}
+
+.pageImg {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.pageImg:hover {
+  transform: scale(1.05);
+}
+
+.pageImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================
+   INDIVIDUAL PAGE
+========================= */
+.ind-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.ind-image {
+  width: 500px;
+  height: 500px;
+  max-width: 100%;
+}
+
+.ind-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.ind-details {
+  padding: 20px;
+  flex: 1 1 400px;
+  max-width: 500px;
+}
+
+.ind-details button {
+  background-color: orangered;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  color: white;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+/* =========================
+   FULL PAGE / FILTER
+========================= */
+.fullpage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.pro-selected {
+  flex: 1 1 200px;
+  max-width: 250px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+/* =========================
+   BOX
+========================= */
+.box1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* =========================
+   GLOBAL IMAGE RULES
+========================= */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================
+   MEDIA QUERIES
+========================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .pageSection {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .ind-image {
+    height: auto;
+  }
+
+  .ind-details {
+    padding: 10px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .navSection {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .user {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .cart {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+
+  .proSection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ind-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ind-details button {
+    width: 100%;
+  }
+
+  .pageImg {
+    width: 90%;
+    height: auto;
+  }
+
+  .ind-image {
+    width: 90%;
+    height: auto;
+  }
+
+  .pro-selected {
+    width: 100%;
+    max-width: 100%;
+  }
+}
